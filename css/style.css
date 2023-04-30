@@ -1,0 +1,482 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.top-image {
+	max-width: 100%;
+	height: auto;
+}
+
+/*ーーーーーーーーーーー*/
+/*top*/
+/*ーーーーーーーーーーー*/
+
+.top__image {
+	position: relative;
+}
+
+.top {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate3d(-15%, -50%, 0);
+
+}
+
+.top-title {
+	font-size: 48px;
+	margin: 0 0 40px;
+	color: #fff;
+	text-align: center;
+}
+
+.top-sub-title {
+	font-size: 36px;
+	color: #fff;
+}
+
+
+/*ーーーーーーーーーーー*/
+/*header*/
+/*ーーーーーーーーーーー*/
+
+.wrapper {
+	max-width: 1140px;
+	margin: auto;
+}
+
+.header {
+	background-color: bisque;
+
+}
+
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+}
+
+.nav-list {
+	display: flex;
+}
+
+.nav-item {
+	margin: 0 0 0 48px;
+}
+
+.nav-item>a {
+	color: #222222;
+}
+
+
+/*ーーーーーーーーーーー*/
+/*slideshow*/
+/*ーーーーーーーーーーー*/
+
+.wrap {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 64px;
+}
+
+.slideshow-inner {
+	display: flex;
+	animation: 15s linear infinite xScroll;
+}
+
+@keyframes xScroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-1700px);
+	}
+}
+
+.slideshow-block {
+	display: flex;
+	width: 1700px;
+}
+
+.content {
+	width: 320px;
+	height: 180px;
+	margin: 10px;
+}
+
+
+
+
+
+
+/*ーーーーーーーーーーー*/
+/*About Area*/
+/*ーーーーーーーーーーー*/
+.About-title {
+	font-size: 24px;
+	color: #ffd61a;
+	text-align: center;
+	margin: 120px 0 24px 0;
+}
+
+.about-sub-title {
+	font-size: 16px;
+	font-weight: lighter;
+	text-align: center;
+	margin: 0 0 64px;
+}
+
+.about-text {
+	text-align: center;
+}
+
+.about-text-1 {
+	margin: 40px 0 40px;
+}
+
+.about-text-2 {
+	margin: 40px 0 80px;
+}
+
+/*---------------------*/
+/*course*/
+/*---------------------*/
+
+.course-title {
+	font-size: 24px;
+	color: #222222;
+	font-weight: bold;
+	text-align: center;
+	margin: 64px 0 24px;
+}
+
+.course-text {
+	text-align: center;
+	margin: 0 0 64px;
+}
+
+.column-wrapper {
+	width: 100%;
+	display: flex;
+}
+
+:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+
+.column1,
+.column2 {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.column1 {
+	background: #fce88d;
+	padding: 48px;
+	box-sizing: border-box;
+}
+
+.column-wrapper:nth-of-type(2n) .column1:nth-of-type(1) {
+	background: #b5ffb6;
+}
+
+.column1title {
+	font-size: 25px;
+	border: 0 0 40px;
+	font-size: 24px;
+}
+
+.column1txt {
+	font-size: 15px;
+}
+
+.column2 img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width:500px) {
+	.column-wrapper {
+		flex-direction: column-reverse;
+	}
+
+	.column1,
+	.column2 {
+		width: 100%;
+	}
+
+	.column1 {
+		padding: 25px;
+	}
+}
+
+/*---------------------*/
+/*news*/
+/*---------------------*/
+.news-title {
+	font-size: 24px;
+	color: #ffd61a;
+	font-weight: bold;
+	text-align: center;
+	margin: 64px 0 24px;
+}
+
+.news-sub-title {
+	font-size: 16px;
+	font-weight: lighter;
+	text-align: center;
+	margin: 0 0 64px;
+}
+
+.btn {
+	display: block;
+	background-color: #ffd61a;
+	color: #fff;
+	font-size: 21px;
+	width: 300px;
+	height: 60px;
+	text-align: center;
+	margin: auto;
+	padding: 10px 0;
+}
+
+.news-list {
+	display: flex;
+	justify-content: center;
+}
+
+.news-item {
+	width: 33.333%;
+	margin: 0 16px;
+}
+
+.news-date {
+	margin: 32px 0 24px 0;
+}
+
+.news-text {
+	margin: 0 0 56px;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+}
+
+/*---------------------*/
+/*Access*/
+/*---------------------*/
+
+/* Google Mapを囲う要素 */
+.map {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 30%;
+	/* 比率を4:3に固定 */
+}
+
+/* Google Mapのiframe */
+.map iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.Access-top {
+	background-color: #707070;
+	margin: 64px 0 80px;
+}
+
+.Access-title {
+	font-size: 24px;
+	color: #222222;
+	font-weight: bold;
+	text-align: center;
+	padding: 64px 0 24px;
+}
+
+.access-sub-title {
+	text-align: center;
+	padding: 0 0 64px;
+}
+
+.access-info {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 64px 0;
+}
+
+.access-title {
+	width: 35%;
+	padding: 20px;
+	background-color: #DADADA;
+	margin: 0 0 10px 0;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.access-item {
+	width: 65%;
+	padding: 20px;
+	background-color: #F3F3F3;
+	margin: 0 0 10px 0;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+/*---------------------*/
+/*Contact*/
+/*---------------------*/
+
+.contact__title {
+	font-size: 24px;
+	color: #222222;
+	font-weight: bold;
+	text-align: center;
+	margin: 64px 0 24px;
+}
+
+.contact-sub-title {
+	text-align: center;
+	margin: 0 0 64px;
+}
+
+.contact-sub-text {
+	text-align: center;
+	margin: 0 0 32px;
+}
+
+.contact-attention {
+	text-align: center;
+	margin: 0 0 80px;
+}
+
+.contact-wrapper {
+	width: 650px;
+	margin: auto;
+}
+
+.contact-inner {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 40px;
+}
+
+.contact-title {
+	width: 120px;
+	margin: 0 120px 0 0;
+	font-weight: bold;
+	text-align: left;
+	padding: 8px 0 0 0;
+}
+
+.contact-title.aja {
+	padding: 40px 0 0 0;
+}
+
+.contact-item {
+
+	margin: 0 0 24px;
+}
+
+.contact-parts {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	box-sizing: border-box;
+	width: 328px;
+	font-size: 16px;
+	border: solid 1px #bfbfbf;
+	padding: 8px;
+}
+
+input[type*="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 24px;
+	height: 24px;
+	margin: 0 40px 0 0;
+	border: solid 1px #a0a0a0;
+	border-radius: 30%;
+}
+
+input[type*="radio"]:checked {
+	background-color: #a0a0a0;
+}
+
+.contact-label {
+	font-size: 14px;
+	display: block;
+	margin: 0 0 24px;
+}
+
+.btn-submit {
+	margin: 0 auto 80px;
+}
+
+.radio {
+	width: 400px;
+	margin: 40px 0 32px 0;
+}
+
+/*---------------------*/
+/*footer*/
+/*---------------------*/
+.footer {
+	padding: 32px 0;
+	background: #707070;
+	text-align: center;
+}
+
+.copyrights {
+	color: #fff;
+	font-size: 18px;
+}
+
+.btn-pagetop {
+	position: absolute;
+	top: -100px;
+	right: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #707070;
+}
+
+.icon-up {
+	color: #fff;
+}
+
+.footer .wrapper {
+	position: relative;
+}
